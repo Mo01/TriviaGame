@@ -60,6 +60,7 @@ var incorrect = 0;
 var unanswered = 0;
 
 function displayQuestion(i) {
+    move();
     $('#answer').css('display', 'none');
     $('#onGoing').css('display', 'block');
     $("#end").css("display", "none");
@@ -239,6 +240,29 @@ $("#startO").off('click').on('click', function () {
 
 
 });
+
+//// loading bar
+var width = 0;
+var id;
+
+function move() {
+    clearInterval(id);
+    var elem = document.getElementById("myBar");   
+    width = 0;
+    id = setInterval(frame, 150);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+      } else {
+        width++; 
+        elem.style.width = width + '%'; 
+        elem.innerHTML = width * 1  + '%';
+      }
+    }
+
+  }
+  
+
 
 
 
@@ -519,6 +543,10 @@ $("#startO").off('click').on('click', function () {
     
     // once the window loads, we are ready for some fireworks!
     window.onload = loop;
+
+
+
+
     
     
     
