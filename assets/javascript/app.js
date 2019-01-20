@@ -14,7 +14,7 @@ var myQuestions = [
         correctAnswer: 'Chile'
     },
     {
-        question: "Q: what is the most popular food in the middle east?",
+        question: "Q: what is the most popular food in the Middle east?",
         answers: {
             a: 'Hummus',
             b: 'Tahini',
@@ -24,37 +24,29 @@ var myQuestions = [
         correctAnswer: 'Pia Bread'
     },
     {
-        question: "3",
+        question: "Q: What is the most popular food in the France",
         answers: {
-            a: 'Hummus',
-            b: 'Tahini',
-            c: 'Falafel',
-            d: 'Pia Bread'
+            a: 'Baguette',
+            b: 'Onion Soup',
+            c: 'Salmon and Shrimp Quiche',
+            d: 'Yule Log'
         },
-        correctAnswer: 'Tahini'
+        correctAnswer: 'Baguette'
     },
     {
-        question: "4",
+        question: "Q: What is the most popular food in Italy",
         answers: {
-            a: 'Hummus',
-            b: 'Tahini',
-            c: 'Falafel',
-            d: 'Pia Bread'
+            a: 'Lasagna',
+            b: 'Fiorentina Steak',
+            c: 'Pizza',
+            d: 'Risotto'
         },
-        correctAnswer: 'Hummus'
+        correctAnswer: 'Pizza'
     }
 
 
 ];
-//****************************************/
-//reset
-// function reset() {
-//     $('#onGoing').css('display', 'none');
-//     setTimeout(function () {
-//         displayQuestion(++i);
-//     }, 3000);
-//     clearTimeout(timeOut);
-// }
+
 //*********************************************************************//
 //  Display Qustion
 
@@ -89,7 +81,6 @@ function displayQuestion(i) {
         // Timer to change pages
         var timeOut = setTimeout(function () {
             ++unanswered;
-            //reset();
             $('#onGoing').css('display', 'none');
             setTimeout(function () {
                 displayQuestion(++i);
@@ -113,7 +104,6 @@ function displayQuestion(i) {
         $("#answA").off('click').on('click', function () {
             if ($(this).val() === myQuestions[i].correctAnswer) {
                 ++correct;
-                // reset();
                 $('#onGoing').css('display', 'none');
                 setTimeout(function () {
                     displayQuestion(++i);
@@ -122,7 +112,6 @@ function displayQuestion(i) {
             }
             else {
                 ++incorrect;
-                //reset();
                 $('#onGoing').css('display', 'none');
                 setTimeout(function () {
                     displayQuestion(++i);
@@ -135,7 +124,6 @@ function displayQuestion(i) {
         $("#answB").off('click').on('click', function () {
             if ($(this).val() === myQuestions[i].correctAnswer) {
                 ++correct;
-                //reset();
                 $('#onGoing').css('display', 'none');
                 setTimeout(function () {
                     displayQuestion(++i);
@@ -144,7 +132,6 @@ function displayQuestion(i) {
             }
             else {
                 ++incorrect;
-                //reset();
                 $('#onGoing').css('display', 'none');
                 setTimeout(function () {
                     displayQuestion(++i);
