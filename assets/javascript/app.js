@@ -237,6 +237,9 @@ $("#startO").off('click').on('click', function () {
     $('#onGoing').css('display', 'block')
     var i = 0;
     displayQuestion(i);
+    correct = 0;
+    incorrect = 0;
+    unanswered = 0;
 
 
 });
